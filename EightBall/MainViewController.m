@@ -45,10 +45,32 @@
                      }];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
 
+- (void)motionBegan:(UIEventSubtype)motion
+          withEvent:(UIEvent *)event {
+
+    // Play a sound whenever a shake motion starts
+    if (motion != UIEventSubtypeMotionShake) return;
+    self.answerLabel.text = @"YES";
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    // Play a sound whenever a shake motion ends
+    if (motion != UIEventSubtypeMotionShake) return;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
