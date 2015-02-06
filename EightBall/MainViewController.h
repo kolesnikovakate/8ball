@@ -11,6 +11,10 @@
 @interface MainViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;
+@property (strong, nonatomic) IBOutlet UIView *answerView;
+@property (strong, nonatomic) IBOutlet UILabel *answerLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *answerBkgImageView;
+
 - (IBAction)clickSettingsButton:(id)sender;
 
 @end
