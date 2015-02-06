@@ -1,0 +1,20 @@
+//
+//  EightBall-Prefix.pch
+//  EightBall
+//
+//  Created by Екатерина Колесникова on 06.02.15.
+//  Copyright (c) 2015 KKate. All rights reserved.
+//
+
+#ifndef EightBall_EightBall_Prefix_pch
+#define EightBall_EightBall_Prefix_pch
+
+#import "CoreData+MagicalRecord.h"
+
+#define kIsInterfaceIdiomPhone  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIsInterfaceIdiomPhone4 (kIsInterfaceIdiomPhone && [[UIScreen mainScreen] bounds].size.height == 480.0f)
+#define kIsInterfaceIdiomPhone5 (kIsInterfaceIdiomPhone && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define kIsInterfaceIdiomPhone6 (kIsInterfaceIdiomPhone && [[UIScreen mainScreen] bounds].size.height == 667.0f)
+#define kIsInterfaceIdiomPhone6Plus (kIsInterfaceIdiomPhone && [[UIScreen mainScreen] bounds].size.height == 736.0f)
+
+#endif
