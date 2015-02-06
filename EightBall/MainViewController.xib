@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="settingsButton" destination="H9O-lk-ibv" id="PkD-Ud-rDb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8ball_answer.png" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-aB-z9e">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="414" id="rLr-Z4-KmR"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rLr-Z4-KmR"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="rLr-Z4-KmR"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-lk-ibv">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="THF-5Z-WhR"/>
+                        <constraint firstAttribute="width" constant="50" id="f4E-4Q-xwJ"/>
+                    </constraints>
+                    <state key="normal" image="settings_button.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="THF-5Z-WhR"/>
+                            <exclude reference="f4E-4Q-xwJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="THF-5Z-WhR"/>
+                            <include reference="f4E-4Q-xwJ"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="clickSettingsButton:" destination="-1" eventType="touchUpInside" id="hDe-OA-dwq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="g3n-aB-z9e" secondAttribute="trailing" id="25B-Pm-Ajw"/>
+                <constraint firstAttribute="trailing" secondItem="H9O-lk-ibv" secondAttribute="trailing" constant="15" id="GAC-gt-2ds"/>
+                <constraint firstAttribute="centerX" secondItem="g3n-aB-z9e" secondAttribute="centerX" id="Q6V-PK-sNE"/>
+                <constraint firstAttribute="bottom" secondItem="H9O-lk-ibv" secondAttribute="bottom" constant="15" id="VAe-8S-HVL"/>
+                <constraint firstItem="g3n-aB-z9e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XPa-pF-D7R"/>
+                <constraint firstAttribute="centerY" secondItem="g3n-aB-z9e" secondAttribute="centerY" id="k50-AZ-8mj"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="g3n-aB-z9e"/>
+                    <exclude reference="H9O-lk-ibv"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="25B-Pm-Ajw"/>
+                    <exclude reference="Q6V-PK-sNE"/>
+                    <exclude reference="XPa-pF-D7R"/>
+                    <exclude reference="k50-AZ-8mj"/>
+                    <exclude reference="GAC-gt-2ds"/>
+                    <exclude reference="VAe-8S-HVL"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="g3n-aB-z9e"/>
+                    <include reference="H9O-lk-ibv"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="25B-Pm-Ajw"/>
+                    <include reference="Q6V-PK-sNE"/>
+                    <include reference="XPa-pF-D7R"/>
+                    <include reference="k50-AZ-8mj"/>
+                    <include reference="GAC-gt-2ds"/>
+                    <include reference="VAe-8S-HVL"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="8ball_answer.png" width="320" height="320"/>
+        <image name="settings_button.png" width="100" height="101"/>
+    </resources>
+</document>
