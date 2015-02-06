@@ -13,40 +13,38 @@
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController {
+    CGRect answerViewFrame_;
+    CGRect answerViewFrameDisappeared_;
+    BOOL isFirstLaunch_;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"8-ball";
-    self.answerLabel.text = @"Shake me!";
+    isFirstLaunch_ = YES;
 
-    self.answerView.layer.cornerRadius = 100;
-    self.answerView.clipsToBounds = YES;
-
-    [self.answerBkgImageView setFrame:CGRectMake(260, 340, 0, 0)];
-    [self.answerBkgImageView setAlpha:0];
-
-    [self.view setUserInteractionEnabled:NO];
-    [self.answerLabel setAlpha:0];
-
-    [UIView animateWithDuration:2
-                     animations:^{
-                         [self.answerBkgImageView setFrame:CGRectMake(140, 340, 120, 120)];
-                         [self.answerBkgImageView setAlpha:1];
-                     }
-                     completion:^(BOOL finished){
-                         [UIView animateWithDuration:2
-                                          animations:^{
-                                              [self.answerLabel setAlpha:1];
-                                          }
-                                          completion:^(BOOL finished){
-                                              [self.view setUserInteractionEnabled:YES];
-                                          }];
-                     }];
 }
 
 - (BOOL)canBecomeFirstResponder {
     return YES;
+}
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    //CGRect frame = self.view.frame;
+    answerViewFrame_ = self.answerBkgImageView.frame;
+    CGPoint center = self.answerBkgImageView.center;
+    answerViewFrameDisappeared_ = CGRectMake(center.x, center.y, 0, 0);
+    [self updateViewConstraints];
+}
+
+- (void)updateViewConstraints
+{
+    if (self.view.superview != nil && [[self.view.superview constraints] count] == 0) {
+        [self.answerLabelYConstraint setConstant:answerViewFrame_.origin.y + 15.f];
+    }
+    [super updateViewConstraints];
 }
 
 - (void)motionBegan:(UIEventSubtype)motion
@@ -54,7 +52,7 @@
 
     // Play a sound whenever a shake motion starts
     if (motion != UIEventSubtypeMotionShake) return;
-    self.answerLabel.text = @"YES";
+    [self answerReappearWithText:@"YES"];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -66,11 +64,54 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
+    if (isFirstLaunch_) {
+        [self.answerBkgImageView setFrame:answerViewFrameDisappeared_];
+        self.answerLabel.hidden = NO;
+        self.answerBkgImageView.hidden = NO;
+        isFirstLaunch_ = NO;
+    }
+    [self firstAnswerAppearWithText:@"Shake me!"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self resignFirstResponder];
+}
+
+- (void)firstAnswerAppearWithText:(NSString *)text
+{
+    [self.answerLabel setAlpha:0];
+    [UIView animateWithDuration:2
+                     animations:^{
+                         self.answerLabel.text = text;
+                         [self.answerBkgImageView setFrame:answerViewFrame_];
+                         [self.answerLabel setAlpha:1];
+                     }
+                     completion:^(BOOL finished){
+                         [self.view setUserInteractionEnabled:YES];
+                     }];
+}
+
+- (void)answerReappearWithText:(NSString *)text
+{
+    //self.answerLabel.text = @"";
+    [UIView animateWithDuration:1
+                     animations:^{
+                         [self.answerBkgImageView setFrame:answerViewFrameDisappeared_];
+                         [self.answerLabel setAlpha:0];
+                         [self.view setUserInteractionEnabled:NO];
+                     }
+                     completion:^(BOOL finished){
+                         self.answerLabel.text = text;
+                         [UIView animateWithDuration:1
+                                          animations:^{
+                                              [self.answerBkgImageView setFrame:answerViewFrame_];
+                                              [self.answerLabel setAlpha:1];
+                                          }
+                                          completion:^(BOOL finished){
+                                              [self.view setUserInteractionEnabled:YES];
+                                          }];
+                     }];
 }
 
 - (void)didReceiveMemoryWarning {
