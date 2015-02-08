@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SettingsViewController.h"
+#import "Answer.h"
 
 @interface MainViewController ()
 
@@ -47,17 +48,14 @@
     [super updateViewConstraints];
 }
 
-- (void)motionBegan:(UIEventSubtype)motion
-          withEvent:(UIEvent *)event {
-
-    // Play a sound whenever a shake motion starts
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion != UIEventSubtypeMotionShake) return;
-    [self answerReappearWithText:@"YES"];
+    Answer *answer = [Answer randomAnswer];
+    [self answerReappearWithText:answer.text];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    // Play a sound whenever a shake motion ends
     if (motion != UIEventSubtypeMotionShake) return;
 }
 

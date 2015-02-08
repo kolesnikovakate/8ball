@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C076A0781A87A2D40062DE44 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0771A87A2D40062DE44 /* Answer.m */; };
+		C076A07A1A87A54F0062DE44 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C076A0791A87A54F0062DE44 /* Answers.json */; };
 		C0A943BB1A84A4A7001A0243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BA1A84A4A7001A0243 /* main.m */; };
 		C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BD1A84A4A7001A0243 /* AppDelegate.m */; };
 		C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */; };
@@ -46,6 +48,9 @@
 /* Begin PBXFileReference section */
 		4DC373CA711890425D5B0680 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5D31CE3B8EB12F64CC93E4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C076A0761A87A2D40062DE44 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
+		C076A0771A87A2D40062DE44 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
+		C076A0791A87A54F0062DE44 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = EightBall/Answers.json; sourceTree = "<group>"; };
 		C0A943B51A84A4A7001A0243 /* EightBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A943B91A84A4A7001A0243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A943BA1A84A4A7001A0243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		C0A943AC1A84A4A7001A0243 = {
 			isa = PBXGroup;
 			children = (
+				C076A0791A87A54F0062DE44 /* Answers.json */,
 				C0A943B71A84A4A7001A0243 /* EightBall */,
 				C0A943D41A84A4A7001A0243 /* EightBallTests */,
 				C0A943B61A84A4A7001A0243 /* Products */,
@@ -146,7 +152,6 @@
 				C0A943C51A84A4A7001A0243 /* Main.storyboard */,
 				C0A943C81A84A4A7001A0243 /* Images.xcassets */,
 				C0A943CA1A84A4A7001A0243 /* LaunchScreen.xib */,
-				C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */,
 				C0A943B81A84A4A7001A0243 /* Supporting Files */,
 			);
 			path = EightBall;
@@ -239,6 +244,9 @@
 		C0FD25A11A84D442008FE57A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */,
+				C076A0761A87A2D40062DE44 /* Answer.h */,
+				C076A0771A87A2D40062DE44 /* Answer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 				C0FD25BD1A84DFE2008FE57A /* answerBkg@3x.png in Resources */,
 				C0FD259C1A84D2E5008FE57A /* 8ball@2x.png in Resources */,
 				C0FD25AC1A84D5EA008FE57A /* settings_button@3x.png in Resources */,
+				C076A07A1A87A54F0062DE44 /* Answers.json in Resources */,
 				C0FD259B1A84D2E5008FE57A /* 8ball.png in Resources */,
 				C0FD25A61A84D45B008FE57A /* MainViewController.xib in Resources */,
 				C0FD259D1A84D2E5008FE57A /* 8ball@3x.png in Resources */,
@@ -393,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */,
+				C076A0781A87A2D40062DE44 /* Answer.m in Sources */,
 				C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */,
 				C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */,
 				C0FD25A51A84D45B008FE57A /* MainViewController.m in Sources */,
