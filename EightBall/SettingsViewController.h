@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SettingsViewController.h
 //  EightBall
 //
 //  Created by Екатерина Колесникова on 06.02.15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SettingsViewController : UIViewController
 
 @end
-
