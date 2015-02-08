@@ -21,4 +21,6 @@ typedef enum {
 @property (nonatomic, retain) NSString * sound;
 @property (nonatomic, retain) NSNumber * sense;
 
++ (Answer *)randomAnswer;
+
 @end

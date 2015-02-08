@@ -15,4 +15,11 @@
 @dynamic sound;
 @dynamic sense;
 
++ (Answer *)randomAnswer
+{
+    NSArray *answers = [Answer MR_findAll];
+    NSUInteger randomNumber = answers.count - (arc4random() % answers.count) - 1;
+    return [answers objectAtIndex:randomNumber];
+}
+
 @end
