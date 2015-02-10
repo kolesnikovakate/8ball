@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SettingsViewController.h"
 #import "Answer.h"
+#import "SoundEffect.h"
 
 @interface MainViewController ()
 
@@ -18,13 +19,16 @@
     CGRect answerViewFrame_;
     CGRect answerViewFrameDisappeared_;
     BOOL isFirstLaunch_;
+    SoundEffect *soundEffect_;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"8-ball";
     isFirstLaunch_ = YES;
-
+    soundEffect_ = [[SoundEffect alloc] init8BallSound];
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAnswer)];
+    [self.view addGestureRecognizer:tapGR];
 }
 
 - (BOOL)canBecomeFirstResponder {
@@ -50,8 +54,7 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion != UIEventSubtypeMotionShake) return;
-    Answer *answer = [Answer randomAnswer];
-    [self answerReappearWithText:answer.text];
+    [self showAnswer];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -69,6 +72,14 @@
         isFirstLaunch_ = NO;
     }
     [self firstAnswerAppearWithText:@"Shake me!"];
+    [soundEffect_ play];
+}
+
+- (void)showAnswer
+{
+    Answer *answer = [Answer randomAnswer];
+    [self answerReappearWithText:answer.text];
+    [soundEffect_ play];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
