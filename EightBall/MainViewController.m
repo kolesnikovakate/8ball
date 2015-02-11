@@ -72,14 +72,18 @@
         isFirstLaunch_ = NO;
     }
     [self firstAnswerAppearWithText:@"Shake me!"];
-    [soundEffect_ play];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults]; 
+    if ([[userDefaults objectForKey:@"isSoundOn"] boolValue])
+        [soundEffect_ play];
 }
 
 - (void)showAnswer
 {
     Answer *answer = [Answer randomAnswer];
     [self answerReappearWithText:answer.text];
-    [soundEffect_ play];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([[userDefaults objectForKey:@"isSoundOn"] boolValue])
+        [soundEffect_ play];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

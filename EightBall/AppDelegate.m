@@ -41,6 +41,10 @@
         }
     }
 
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:[NSNumber numberWithBool:YES] forKey:@"isSoundOn"];
+    [userDefaults synchronize];
+
     MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     //[navigationController setNavigationBarHidden:YES animated:NO];

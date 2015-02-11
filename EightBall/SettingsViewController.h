@@ -10,4 +10,7 @@
 
 @interface SettingsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UISwitch *soundSwitsh;
+- (IBAction)changeValueSoundSwitch:(id)sender;
+
 @end
