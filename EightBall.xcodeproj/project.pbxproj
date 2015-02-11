@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C076A0781A87A2D40062DE44 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0771A87A2D40062DE44 /* Answer.m */; };
 		C076A07A1A87A54F0062DE44 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C076A0791A87A54F0062DE44 /* Answers.json */; };
+		C076A0A21A89E5470062DE44 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C076A0A11A89E5470062DE44 /* AudioToolbox.framework */; };
+		C076A0A71A89E91D0062DE44 /* soundeffect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C076A0A61A89E8000062DE44 /* soundeffect.m4a */; };
+		C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0A91A89EC020062DE44 /* SoundEffect.m */; };
 		C0A943BB1A84A4A7001A0243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BA1A84A4A7001A0243 /* main.m */; };
 		C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BD1A84A4A7001A0243 /* AppDelegate.m */; };
 		C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */; };
@@ -51,6 +54,10 @@
 		C076A0761A87A2D40062DE44 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
 		C076A0771A87A2D40062DE44 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
 		C076A0791A87A54F0062DE44 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = EightBall/Answers.json; sourceTree = "<group>"; };
+		C076A0A11A89E5470062DE44 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C076A0A61A89E8000062DE44 /* soundeffect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundeffect.m4a; sourceTree = "<group>"; };
+		C076A0A81A89EC020062DE44 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
+		C076A0A91A89EC020062DE44 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
 		C0A943B51A84A4A7001A0243 /* EightBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A943B91A84A4A7001A0243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A943BA1A84A4A7001A0243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C076A0A21A89E5470062DE44 /* AudioToolbox.framework in Frameworks */,
 				F7F5C78CC9282CD6E595A729 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,9 +124,27 @@
 		83B738C5190D54EADAC79C74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C076A0A11A89E5470062DE44 /* AudioToolbox.framework */,
 				4DC373CA711890425D5B0680 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C076A0A31A89E5C80062DE44 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C076A0A61A89E8000062DE44 /* soundeffect.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		C076A0AB1A89EC090062DE44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C076A0A81A89EC020062DE44 /* SoundEffect.h */,
+				C076A0A91A89EC020062DE44 /* SoundEffect.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C0A943AC1A84A4A7001A0243 = {
@@ -145,6 +171,7 @@
 		C0A943B71A84A4A7001A0243 /* EightBall */ = {
 			isa = PBXGroup;
 			children = (
+				C076A0AB1A89EC090062DE44 /* Services */,
 				C0FD259E1A84D426008FE57A /* MVC */,
 				C0FD25901A84D290008FE57A /* Resources */,
 				C0A943BC1A84A4A7001A0243 /* AppDelegate.h */,
@@ -187,6 +214,7 @@
 		C0FD25901A84D290008FE57A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C076A0A31A89E5C80062DE44 /* Sounds */,
 				C0FD25911A84D29D008FE57A /* Images */,
 			);
 			name = Resources;
@@ -348,6 +376,7 @@
 				C0FD25AC1A84D5EA008FE57A /* settings_button@3x.png in Resources */,
 				C076A07A1A87A54F0062DE44 /* Answers.json in Resources */,
 				C0FD259B1A84D2E5008FE57A /* 8ball.png in Resources */,
+				C076A0A71A89E91D0062DE44 /* soundeffect.m4a in Resources */,
 				C0FD25A61A84D45B008FE57A /* MainViewController.xib in Resources */,
 				C0FD259D1A84D2E5008FE57A /* 8ball@3x.png in Resources */,
 				C0FD25BB1A84DFE2008FE57A /* answerBkg.png in Resources */,
@@ -404,6 +433,7 @@
 				C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */,
 				C076A0781A87A2D40062DE44 /* Answer.m in Sources */,
 				C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */,
+				C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */,
 				C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */,
 				C0FD25A51A84D45B008FE57A /* MainViewController.m in Sources */,
 				C0A943BB1A84A4A7001A0243 /* main.m in Sources */,

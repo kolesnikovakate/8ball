@@ -125,16 +125,16 @@
                     <exclude reference="vgk-YM-8lL"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="25B-Pm-Ajw"/>
-                    <exclude reference="Q6V-PK-sNE"/>
-                    <exclude reference="XPa-pF-D7R"/>
-                    <exclude reference="k50-AZ-8mj"/>
-                    <exclude reference="EYR-2B-ttd"/>
-                    <exclude reference="gML-A8-feR"/>
                     <exclude reference="Epc-6p-qhE"/>
                     <exclude reference="FC6-YM-fFR"/>
                     <exclude reference="GAC-gt-2ds"/>
                     <exclude reference="VAe-8S-HVL"/>
+                    <exclude reference="EYR-2B-ttd"/>
+                    <exclude reference="gML-A8-feR"/>
+                    <exclude reference="25B-Pm-Ajw"/>
+                    <exclude reference="Q6V-PK-sNE"/>
+                    <exclude reference="XPa-pF-D7R"/>
+                    <exclude reference="k50-AZ-8mj"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -145,16 +145,16 @@
                     <include reference="vgk-YM-8lL"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="25B-Pm-Ajw"/>
-                    <include reference="Q6V-PK-sNE"/>
-                    <include reference="XPa-pF-D7R"/>
-                    <include reference="k50-AZ-8mj"/>
-                    <include reference="EYR-2B-ttd"/>
-                    <include reference="gML-A8-feR"/>
                     <include reference="Epc-6p-qhE"/>
                     <include reference="FC6-YM-fFR"/>
                     <include reference="GAC-gt-2ds"/>
                     <include reference="VAe-8S-HVL"/>
+                    <include reference="EYR-2B-ttd"/>
+                    <include reference="gML-A8-feR"/>
+                    <include reference="25B-Pm-Ajw"/>
+                    <include reference="Q6V-PK-sNE"/>
+                    <include reference="XPa-pF-D7R"/>
+                    <include reference="k50-AZ-8mj"/>
                 </mask>
             </variation>
         </view>

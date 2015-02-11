@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
+                <outlet property="soundSwitsh" destination="sZZ-wJ-B2v" id="aQd-dO-jhp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,85 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZZ-wJ-B2v">
+                    <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="SRZ-GU-Fje"/>
+                        <constraint firstAttribute="width" constant="49" id="mXR-E6-8L7"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SRZ-GU-Fje"/>
+                            <exclude reference="mXR-E6-8L7"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="SRZ-GU-Fje"/>
+                            <include reference="mXR-E6-8L7"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="changeValueSoundSwitch:" destination="-1" eventType="valueChanged" id="91g-iq-dQL"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звуки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-LB-ZfG">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="hBd-Ge-aKa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hBd-Ge-aKa"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="hBd-Ge-aKa"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sZZ-wJ-B2v" firstAttribute="leading" secondItem="Qib-LB-ZfG" secondAttribute="trailing" constant="8" id="8Kr-HK-qig"/>
+                <constraint firstItem="sZZ-wJ-B2v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="BCi-QX-xQ8"/>
+                <constraint firstAttribute="trailing" secondItem="sZZ-wJ-B2v" secondAttribute="trailing" constant="20" id="dnK-S8-fY5"/>
+                <constraint firstItem="Qib-LB-ZfG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="eW7-YA-jbw"/>
+                <constraint firstItem="Qib-LB-ZfG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="nNg-5t-6oF"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="sZZ-wJ-B2v"/>
+                    <exclude reference="Qib-LB-ZfG"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="eW7-YA-jbw"/>
+                    <exclude reference="nNg-5t-6oF"/>
+                    <exclude reference="8Kr-HK-qig"/>
+                    <exclude reference="BCi-QX-xQ8"/>
+                    <exclude reference="dnK-S8-fY5"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="sZZ-wJ-B2v"/>
+                    <include reference="Qib-LB-ZfG"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="eW7-YA-jbw"/>
+                    <include reference="nNg-5t-6oF"/>
+                    <include reference="8Kr-HK-qig"/>
+                    <include reference="BCi-QX-xQ8"/>
+                    <include reference="dnK-S8-fY5"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="129" y="126"/>
         </view>
     </objects>
 </document>
