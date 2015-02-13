@@ -7,12 +7,17 @@
 //
 
 #import "SettingsViewController.h"
+#import "Answer.h"
 
-@interface SettingsViewController ()
+@interface SettingsViewController () < NSFetchedResultsControllerDelegate >
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultControllerAnswers;
 
 @end
 
 @implementation SettingsViewController
+
+@synthesize fetchedResultControllerAnswers = _fetchedResultControllerAnswers;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.fetchedResultControllerAnswers = [NSFetchedResultsController fetchedResultControllerAnswers];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
@@ -37,6 +43,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    self.fetchedResultControllerAnswers = nil;
+}
+
+#pragma mark - Property
+
+- (void)setFetchedResultControllerAnswers:(NSFetchedResultsController *)fetchedResultControllerAnswers
+{
+    _fetchedResultControllerAnswers.delegate = nil;
+    _fetchedResultControllerAnswers = fetchedResultControllerAnswers;
+    _fetchedResultControllerAnswers.delegate = self;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -49,7 +69,8 @@
     if (section == 0 || section == 2) {
         return 1;
     } else {
-        return 1;
+        id sectionInfo = [[self.fetchedResultControllerAnswers sections] objectAtIndex:0];
+        return [sectionInfo numberOfObjects];
     }
 }
 
@@ -70,8 +91,9 @@
         if (nil == cellAnswer) {
             cellAnswer = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
+        Answer *answer = [self.fetchedResultControllerAnswers objectAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0]];
         
-        cellAnswer.textLabel.text = @"Привет";
+        cellAnswer.textLabel.text = answer.text;
         cell = cellAnswer;
         
     } else {
@@ -99,7 +121,12 @@
     if (section == 1) {
         return 40.0f;
     }
-    return 5.0f;
+    return 1.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1.0f;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

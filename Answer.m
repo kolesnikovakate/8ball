@@ -29,7 +29,7 @@
 {
     NSFetchRequest *request = [Answer MR_requestAll];
 
-    NSSortDescriptor *sortDescriptor1 = [NSSortDescriptor sortDescriptorWithKey:@"text" ascending:NO];
+    NSSortDescriptor *sortDescriptor1 = [NSSortDescriptor sortDescriptorWithKey:@"text" ascending:YES];
     [request setSortDescriptors:@[sortDescriptor1]];
 
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:request
