@@ -24,3 +24,9 @@ typedef enum {
 + (Answer *)randomAnswer;
 
 @end
+
+@interface NSFetchedResultsController (Answer)
+
++ (NSFetchedResultsController *)fetchedResultControllerAnswers;
+
+@end

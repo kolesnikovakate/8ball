@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147A91A8E255700AA01A0 /* SettingsCell.m */; };
+		C07147AC1A8E257000AA01A0 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07147AB1A8E257000AA01A0 /* SettingsCell.xib */; };
 		C076A0781A87A2D40062DE44 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0771A87A2D40062DE44 /* Answer.m */; };
 		C076A07A1A87A54F0062DE44 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C076A0791A87A54F0062DE44 /* Answers.json */; };
 		C076A0A21A89E5470062DE44 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C076A0A11A89E5470062DE44 /* AudioToolbox.framework */; };
@@ -51,6 +53,9 @@
 /* Begin PBXFileReference section */
 		4DC373CA711890425D5B0680 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5D31CE3B8EB12F64CC93E4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C07147A81A8E255700AA01A0 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		C07147A91A8E255700AA01A0 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		C07147AB1A8E257000AA01A0 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		C076A0761A87A2D40062DE44 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
 		C076A0771A87A2D40062DE44 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
 		C076A0791A87A54F0062DE44 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = EightBall/Answers.json; sourceTree = "<group>"; };
@@ -128,6 +133,16 @@
 				4DC373CA711890425D5B0680 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C07147A71A8E253800AA01A0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C07147A81A8E255700AA01A0 /* SettingsCell.h */,
+				C07147A91A8E255700AA01A0 /* SettingsCell.m */,
+				C07147AB1A8E257000AA01A0 /* SettingsCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C076A0A31A89E5C80062DE44 /* Sounds */ = {
@@ -265,6 +280,7 @@
 		C0FD25A01A84D43C008FE57A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C07147A71A8E253800AA01A0 /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -375,6 +391,7 @@
 				C0FD259C1A84D2E5008FE57A /* 8ball@2x.png in Resources */,
 				C0FD25AC1A84D5EA008FE57A /* settings_button@3x.png in Resources */,
 				C076A07A1A87A54F0062DE44 /* Answers.json in Resources */,
+				C07147AC1A8E257000AA01A0 /* SettingsCell.xib in Resources */,
 				C0FD259B1A84D2E5008FE57A /* 8ball.png in Resources */,
 				C076A0A71A89E91D0062DE44 /* soundeffect.m4a in Resources */,
 				C0FD25A61A84D45B008FE57A /* MainViewController.xib in Resources */,
@@ -432,6 +449,7 @@
 			files = (
 				C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */,
 				C076A0781A87A2D40062DE44 /* Answer.m in Sources */,
+				C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */,
 				C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */,
 				C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */,
 				C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */,
