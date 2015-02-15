@@ -71,7 +71,7 @@
         self.answerBkgImageView.hidden = NO;
         isFirstLaunch_ = NO;
     }
-    [self firstAnswerAppearWithText:@"Shake me!"];
+    [self firstAnswerAppearWithText:@"Потряси меня!"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults]; 
     if ([[userDefaults objectForKey:@"isSoundOn"] boolValue])
         [soundEffect_ play];
@@ -80,10 +80,19 @@
 - (void)showAnswer
 {
     Answer *answer = [Answer randomAnswer];
+    if (answer) {
     [self answerReappearWithText:answer.text];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([[userDefaults objectForKey:@"isSoundOn"] boolValue])
         [soundEffect_ play];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Все ответы удалены!"
+                                                            message:@"Добавте варианты ответов в настройках!"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -94,7 +103,7 @@
 - (void)firstAnswerAppearWithText:(NSString *)text
 {
     [self.answerLabel setAlpha:0];
-    [UIView animateWithDuration:2
+    [UIView animateWithDuration:1
                      animations:^{
                          self.answerLabel.text = text;
                          [self.answerBkgImageView setFrame:answerViewFrame_];

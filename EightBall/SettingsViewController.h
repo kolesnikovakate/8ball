@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsCell.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController < UITableViewDelegate, UITableViewDataSource,
+                                                        SettingsCellDelegate >
 
-@property (strong, nonatomic) IBOutlet UISwitch *soundSwitsh;
-- (IBAction)changeValueSoundSwitch:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
