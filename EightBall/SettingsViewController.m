@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "Answer.h"
+#import "AddAnswerViewController.h"
 
 @interface SettingsViewController () < NSFetchedResultsControllerDelegate >
 
@@ -15,7 +16,10 @@
 
 @end
 
-@implementation SettingsViewController
+@implementation SettingsViewController {
+    UIBarButtonItem *rightBarButtonItemEdit_;
+    UIBarButtonItem *rightBarButtonItemDone_;
+}
 
 @synthesize fetchedResultControllerAnswers = _fetchedResultControllerAnswers;
 
@@ -36,6 +40,16 @@
 
     self.tableView.sectionFooterHeight = 1;
     self.tableView.sectionHeaderHeight = 1;
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
+
+    rightBarButtonItemEdit_ =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                       target:self
+                                                                                       action:@selector(setTableViewEditStyle:)];
+    rightBarButtonItemDone_ =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                           target:self
+                                                                                           action:@selector(resetTableViewEditStyle:)];
+
+    self.navigationItem.rightBarButtonItem = rightBarButtonItemEdit_;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +60,18 @@
 - (void)dealloc
 {
     self.fetchedResultControllerAnswers = nil;
+}
+
+- (void)setTableViewEditStyle:(id)sender
+{
+    [self.tableView setEditing:YES animated:YES];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItemDone_;
+}
+
+- (void)resetTableViewEditStyle:(id)sender
+{
+    [self.tableView setEditing:NO animated:YES];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItemEdit_;
 }
 
 #pragma mark - Property
@@ -82,6 +108,7 @@
         cell = (SettingsCell *)[self.tableView dequeueReusableCellWithIdentifier:cellIdentifier
                                                                     forIndexPath:indexPath];
 
+        [(SettingsCell *)cell setDelegate:self];
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [[(SettingsCell *)cell soundSwitsh] setOn:[[userDefaults objectForKey:@"isSoundOn"] boolValue] animated:YES];
     } else if (indexPath.section == 1) {
@@ -92,10 +119,10 @@
             cellAnswer = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
         Answer *answer = [self.fetchedResultControllerAnswers objectAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0]];
-        
+
         cellAnswer.textLabel.text = answer.text;
         cell = cellAnswer;
-        
+
     } else {
         static NSString *cellIdentifier = @"CellAddAnswer";
         UITableViewCell *cellAddAnswer = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -137,13 +164,32 @@
     return nil;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        return YES;
+    }
+    return NO;
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 2) {
-        NSLog(@"Добавление ответа.");
+    if (indexPath.section == 2 || indexPath.section == 1) {
+        AddAnswerViewController *destVC = [[AddAnswerViewController alloc] init];
+        if (indexPath.section == 1 ) {
+            destVC.answer = [self.fetchedResultControllerAnswers objectAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0]];
+        }
+        [self.navigationController pushViewController:destVC animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Answer *answer = [self.fetchedResultControllerAnswers objectAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0]];
+        [answer removeAnswer];
     }
 }
 
@@ -154,6 +200,37 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:[NSNumber numberWithBool:cell.soundSwitsh.isOn] forKey:@"isSoundOn"];
     [userDefaults synchronize];
+}
+
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView reloadData];
+            NSLog(@"didChangeObject - ChangeInsert");
+            break;
+
+        case NSFetchedResultsChangeDelete: {
+            [tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row inSection:1]] withRowAnimation:UITableViewRowAnimationLeft];
+            NSLog(@"didChangeObject - ChangeDelete");
+            break;
+        }
+        case NSFetchedResultsChangeUpdate: {
+            [tableView reloadData];
+            NSLog(@"didChangeObject - ChangeUpdate");
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+            NSLog(@"didChangeObject - ChangeMove");
+            break;
+    }
 }
 
 @end

@@ -22,6 +22,7 @@ typedef enum {
 @property (nonatomic, retain) NSNumber * sense;
 
 + (Answer *)randomAnswer;
+- (void)removeAnswer;
 
 @end
 

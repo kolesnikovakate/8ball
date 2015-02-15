@@ -3,7 +3,7 @@
     <entity name="Answer" representedClassName="Answer" syncable="YES">
         <attribute name="sense" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sound" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Answer" positionX="-63" positionY="-18" width="128" height="90"/>

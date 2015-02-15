@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147A91A8E255700AA01A0 /* SettingsCell.m */; };
 		C07147AC1A8E257000AA01A0 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07147AB1A8E257000AA01A0 /* SettingsCell.xib */; };
+		C07147B01A8E371B00AA01A0 /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */; };
+		C07147B11A8E371B00AA01A0 /* AddAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */; };
+		C07147B41A8E385D00AA01A0 /* AddAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147B31A8E385D00AA01A0 /* AddAnswerView.m */; };
 		C076A0781A87A2D40062DE44 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0771A87A2D40062DE44 /* Answer.m */; };
 		C076A07A1A87A54F0062DE44 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C076A0791A87A54F0062DE44 /* Answers.json */; };
 		C076A0A21A89E5470062DE44 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C076A0A11A89E5470062DE44 /* AudioToolbox.framework */; };
@@ -17,7 +20,6 @@
 		C0A943BB1A84A4A7001A0243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BA1A84A4A7001A0243 /* main.m */; };
 		C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BD1A84A4A7001A0243 /* AppDelegate.m */; };
 		C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */; };
-		C0A943C71A84A4A7001A0243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A943C51A84A4A7001A0243 /* Main.storyboard */; };
 		C0A943C91A84A4A7001A0243 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A943C81A84A4A7001A0243 /* Images.xcassets */; };
 		C0A943CC1A84A4A7001A0243 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0A943CA1A84A4A7001A0243 /* LaunchScreen.xib */; };
 		C0A943D81A84A4A7001A0243 /* EightBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943D71A84A4A7001A0243 /* EightBallTests.m */; };
@@ -56,6 +58,11 @@
 		C07147A81A8E255700AA01A0 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
 		C07147A91A8E255700AA01A0 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
 		C07147AB1A8E257000AA01A0 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		C07147AD1A8E371B00AA01A0 /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerViewController.h; sourceTree = "<group>"; };
+		C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerViewController.m; sourceTree = "<group>"; };
+		C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAnswerViewController.xib; sourceTree = "<group>"; };
+		C07147B21A8E385D00AA01A0 /* AddAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerView.h; sourceTree = "<group>"; };
+		C07147B31A8E385D00AA01A0 /* AddAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerView.m; sourceTree = "<group>"; };
 		C076A0761A87A2D40062DE44 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
 		C076A0771A87A2D40062DE44 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
 		C076A0791A87A54F0062DE44 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = EightBall/Answers.json; sourceTree = "<group>"; };
@@ -69,7 +76,6 @@
 		C0A943BC1A84A4A7001A0243 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C0A943BD1A84A4A7001A0243 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C0A943C01A84A4A7001A0243 /* EightBall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EightBall.xcdatamodel; sourceTree = "<group>"; };
-		C0A943C61A84A4A7001A0243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0A943C81A84A4A7001A0243 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C0A943CB1A84A4A7001A0243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C0A943D11A84A4A7001A0243 /* EightBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EightBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,7 +197,6 @@
 				C0FD25901A84D290008FE57A /* Resources */,
 				C0A943BC1A84A4A7001A0243 /* AppDelegate.h */,
 				C0A943BD1A84A4A7001A0243 /* AppDelegate.m */,
-				C0A943C51A84A4A7001A0243 /* Main.storyboard */,
 				C0A943C81A84A4A7001A0243 /* Images.xcassets */,
 				C0A943CA1A84A4A7001A0243 /* LaunchScreen.xib */,
 				C0A943B81A84A4A7001A0243 /* Supporting Files */,
@@ -273,6 +278,9 @@
 				C0FD25AD1A84D6DC008FE57A /* SettingsViewController.h */,
 				C0FD25AE1A84D6DC008FE57A /* SettingsViewController.m */,
 				C0FD25AF1A84D6DC008FE57A /* SettingsViewController.xib */,
+				C07147AD1A8E371B00AA01A0 /* AddAnswerViewController.h */,
+				C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */,
+				C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				C07147A71A8E253800AA01A0 /* Cells */,
+				C07147B21A8E385D00AA01A0 /* AddAnswerView.h */,
+				C07147B31A8E385D00AA01A0 /* AddAnswerView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -377,7 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A943C71A84A4A7001A0243 /* Main.storyboard in Resources */,
+				C07147B11A8E371B00AA01A0 /* AddAnswerViewController.xib in Resources */,
 				C0FD25BC1A84DFE2008FE57A /* answerBkg@2x.png in Resources */,
 				C0FD25B71A84DAB4008FE57A /* 8ball_answer@3x.png in Resources */,
 				C0A943CC1A84A4A7001A0243 /* LaunchScreen.xib in Resources */,
@@ -447,9 +457,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07147B41A8E385D00AA01A0 /* AddAnswerView.m in Sources */,
 				C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */,
 				C076A0781A87A2D40062DE44 /* Answer.m in Sources */,
 				C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */,
+				C07147B01A8E371B00AA01A0 /* AddAnswerViewController.m in Sources */,
 				C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */,
 				C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */,
 				C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */,
@@ -477,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C0A943C51A84A4A7001A0243 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0A943C61A84A4A7001A0243 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C0A943CA1A84A4A7001A0243 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

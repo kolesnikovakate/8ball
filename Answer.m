@@ -17,8 +17,17 @@
 + (Answer *)randomAnswer
 {
     NSArray *answers = [Answer MR_findAll];
-    NSUInteger randomNumber = answers.count - (arc4random() % answers.count) - 1;
-    return [answers objectAtIndex:randomNumber];
+    if (answers.count){
+        NSUInteger randomNumber = answers.count - (arc4random() % answers.count) - 1;
+        return[answers objectAtIndex:randomNumber];
+    }
+    return nil;
+}
+
+- (void)removeAnswer
+{
+    [self MR_deleteEntity];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfAndWait];
 }
 
 @end
