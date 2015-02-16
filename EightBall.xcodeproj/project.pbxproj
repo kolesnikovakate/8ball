@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147A91A8E255700AA01A0 /* SettingsCell.m */; };
-		C07147AC1A8E257000AA01A0 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07147AB1A8E257000AA01A0 /* SettingsCell.xib */; };
-		C07147B01A8E371B00AA01A0 /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */; };
-		C07147B11A8E371B00AA01A0 /* AddAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */; };
-		C07147B41A8E385D00AA01A0 /* AddAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147B31A8E385D00AA01A0 /* AddAnswerView.m */; };
-		C076A0781A87A2D40062DE44 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0771A87A2D40062DE44 /* Answer.m */; };
-		C076A07A1A87A54F0062DE44 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C076A0791A87A54F0062DE44 /* Answers.json */; };
+		C07147EF1A91CF2300AA01A0 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = C07147EE1A91CF2300AA01A0 /* Answer.m */; };
+		C07147F11A91CF5200AA01A0 /* Answers.json in Resources */ = {isa = PBXBuildFile; fileRef = C07147F01A91CF5200AA01A0 /* Answers.json */; };
+		C07147FC1A91CF8C00AA01A0 /* 8ball_answer.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F31A91CF8C00AA01A0 /* 8ball_answer.png */; };
+		C07147FD1A91CF8C00AA01A0 /* 8ball_answer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F41A91CF8C00AA01A0 /* 8ball_answer@2x.png */; };
+		C07147FE1A91CF8C00AA01A0 /* 8ball_answer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F51A91CF8C00AA01A0 /* 8ball_answer@3x.png */; };
+		C07147FF1A91CF8C00AA01A0 /* answerBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F61A91CF8C00AA01A0 /* answerBkg.png */; };
+		C07148001A91CF8C00AA01A0 /* answerBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F71A91CF8C00AA01A0 /* answerBkg@2x.png */; };
+		C07148011A91CF8C00AA01A0 /* answerBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F81A91CF8C00AA01A0 /* answerBkg@3x.png */; };
+		C07148021A91CF8C00AA01A0 /* settings_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147F91A91CF8C00AA01A0 /* settings_button.png */; };
+		C07148031A91CF8C00AA01A0 /* settings_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147FA1A91CF8C00AA01A0 /* settings_button@2x.png */; };
+		C07148041A91CF8C00AA01A0 /* settings_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07147FB1A91CF8C00AA01A0 /* settings_button@3x.png */; };
+		C07148081A91CFFF00AA01A0 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07148061A91CFFF00AA01A0 /* SettingsCell.m */; };
+		C07148091A91CFFF00AA01A0 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07148071A91CFFF00AA01A0 /* SettingsCell.xib */; };
+		C071480C1A91D01000AA01A0 /* AddAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C071480B1A91D01000AA01A0 /* AddAnswerView.m */; };
+		C07148161A91D02A00AA01A0 /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C071480E1A91D02A00AA01A0 /* AddAnswerViewController.m */; };
+		C07148171A91D02A00AA01A0 /* AddAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C071480F1A91D02A00AA01A0 /* AddAnswerViewController.xib */; };
+		C07148181A91D02A00AA01A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07148111A91D02A00AA01A0 /* MainViewController.m */; };
+		C07148191A91D02A00AA01A0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07148121A91D02A00AA01A0 /* MainViewController.xib */; };
+		C071481A1A91D02A00AA01A0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07148141A91D02A00AA01A0 /* SettingsViewController.m */; };
+		C071481B1A91D02A00AA01A0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07148151A91D02A00AA01A0 /* SettingsViewController.xib */; };
+		C071481E1A91D04900AA01A0 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = C071481D1A91D04900AA01A0 /* SoundEffect.m */; };
 		C076A0A21A89E5470062DE44 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C076A0A11A89E5470062DE44 /* AudioToolbox.framework */; };
-		C076A0A71A89E91D0062DE44 /* soundeffect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C076A0A61A89E8000062DE44 /* soundeffect.m4a */; };
-		C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = C076A0A91A89EC020062DE44 /* SoundEffect.m */; };
 		C0A943BB1A84A4A7001A0243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BA1A84A4A7001A0243 /* main.m */; };
 		C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BD1A84A4A7001A0243 /* AppDelegate.m */; };
 		C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */; };
@@ -26,19 +38,6 @@
 		C0FD259B1A84D2E5008FE57A /* 8ball.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25981A84D2E5008FE57A /* 8ball.png */; };
 		C0FD259C1A84D2E5008FE57A /* 8ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25991A84D2E5008FE57A /* 8ball@2x.png */; };
 		C0FD259D1A84D2E5008FE57A /* 8ball@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD259A1A84D2E5008FE57A /* 8ball@3x.png */; };
-		C0FD25A51A84D45B008FE57A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD25A31A84D45B008FE57A /* MainViewController.m */; };
-		C0FD25A61A84D45B008FE57A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25A41A84D45B008FE57A /* MainViewController.xib */; };
-		C0FD25AA1A84D5EA008FE57A /* settings_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25A71A84D5EA008FE57A /* settings_button.png */; };
-		C0FD25AB1A84D5EA008FE57A /* settings_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25A81A84D5EA008FE57A /* settings_button@2x.png */; };
-		C0FD25AC1A84D5EA008FE57A /* settings_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25A91A84D5EA008FE57A /* settings_button@3x.png */; };
-		C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD25AE1A84D6DC008FE57A /* SettingsViewController.m */; };
-		C0FD25B11A84D6DC008FE57A /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25AF1A84D6DC008FE57A /* SettingsViewController.xib */; };
-		C0FD25B51A84DAB4008FE57A /* 8ball_answer.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25B21A84DAB4008FE57A /* 8ball_answer.png */; };
-		C0FD25B61A84DAB4008FE57A /* 8ball_answer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25B31A84DAB4008FE57A /* 8ball_answer@2x.png */; };
-		C0FD25B71A84DAB4008FE57A /* 8ball_answer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25B41A84DAB4008FE57A /* 8ball_answer@3x.png */; };
-		C0FD25BB1A84DFE2008FE57A /* answerBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25B81A84DFE1008FE57A /* answerBkg.png */; };
-		C0FD25BC1A84DFE2008FE57A /* answerBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25B91A84DFE1008FE57A /* answerBkg@2x.png */; };
-		C0FD25BD1A84DFE2008FE57A /* answerBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FD25BA1A84DFE1008FE57A /* answerBkg@3x.png */; };
 		F7F5C78CC9282CD6E595A729 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC373CA711890425D5B0680 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,21 +54,36 @@
 /* Begin PBXFileReference section */
 		4DC373CA711890425D5B0680 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5D31CE3B8EB12F64CC93E4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C07147A81A8E255700AA01A0 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
-		C07147A91A8E255700AA01A0 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
-		C07147AB1A8E257000AA01A0 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
-		C07147AD1A8E371B00AA01A0 /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerViewController.h; sourceTree = "<group>"; };
-		C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerViewController.m; sourceTree = "<group>"; };
-		C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAnswerViewController.xib; sourceTree = "<group>"; };
-		C07147B21A8E385D00AA01A0 /* AddAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerView.h; sourceTree = "<group>"; };
-		C07147B31A8E385D00AA01A0 /* AddAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerView.m; sourceTree = "<group>"; };
-		C076A0761A87A2D40062DE44 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
-		C076A0771A87A2D40062DE44 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
-		C076A0791A87A54F0062DE44 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = EightBall/Answers.json; sourceTree = "<group>"; };
+		C07147ED1A91CF2300AA01A0 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Models/Answer.h; sourceTree = "<group>"; };
+		C07147EE1A91CF2300AA01A0 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = Models/Answer.m; sourceTree = "<group>"; };
+		C07147F01A91CF5200AA01A0 /* Answers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Answers.json; path = Resources/Answers.json; sourceTree = "<group>"; };
+		C07147F21A91CF7300AA01A0 /* soundeffect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = soundeffect.m4a; path = Resources/Sounds/soundeffect.m4a; sourceTree = "<group>"; };
+		C07147F31A91CF8C00AA01A0 /* 8ball_answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8ball_answer.png; path = Resources/Images/8ball_answer.png; sourceTree = "<group>"; };
+		C07147F41A91CF8C00AA01A0 /* 8ball_answer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8ball_answer@2x.png"; path = "Resources/Images/8ball_answer@2x.png"; sourceTree = "<group>"; };
+		C07147F51A91CF8C00AA01A0 /* 8ball_answer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8ball_answer@3x.png"; path = "Resources/Images/8ball_answer@3x.png"; sourceTree = "<group>"; };
+		C07147F61A91CF8C00AA01A0 /* answerBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answerBkg.png; path = Resources/Images/answerBkg.png; sourceTree = "<group>"; };
+		C07147F71A91CF8C00AA01A0 /* answerBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "answerBkg@2x.png"; path = "Resources/Images/answerBkg@2x.png"; sourceTree = "<group>"; };
+		C07147F81A91CF8C00AA01A0 /* answerBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "answerBkg@3x.png"; path = "Resources/Images/answerBkg@3x.png"; sourceTree = "<group>"; };
+		C07147F91A91CF8C00AA01A0 /* settings_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_button.png; path = Resources/Images/settings_button.png; sourceTree = "<group>"; };
+		C07147FA1A91CF8C00AA01A0 /* settings_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_button@2x.png"; path = "Resources/Images/settings_button@2x.png"; sourceTree = "<group>"; };
+		C07147FB1A91CF8C00AA01A0 /* settings_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_button@3x.png"; path = "Resources/Images/settings_button@3x.png"; sourceTree = "<group>"; };
+		C07148051A91CFFF00AA01A0 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsCell.h; path = Views/Cells/SettingsCell.h; sourceTree = "<group>"; };
+		C07148061A91CFFF00AA01A0 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsCell.m; path = Views/Cells/SettingsCell.m; sourceTree = "<group>"; };
+		C07148071A91CFFF00AA01A0 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsCell.xib; path = Views/Cells/SettingsCell.xib; sourceTree = "<group>"; };
+		C071480A1A91D01000AA01A0 /* AddAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAnswerView.h; path = Views/AddAnswerView.h; sourceTree = "<group>"; };
+		C071480B1A91D01000AA01A0 /* AddAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAnswerView.m; path = Views/AddAnswerView.m; sourceTree = "<group>"; };
+		C071480D1A91D02A00AA01A0 /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAnswerViewController.h; path = Controllers/AddAnswerViewController.h; sourceTree = "<group>"; };
+		C071480E1A91D02A00AA01A0 /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAnswerViewController.m; path = Controllers/AddAnswerViewController.m; sourceTree = "<group>"; };
+		C071480F1A91D02A00AA01A0 /* AddAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddAnswerViewController.xib; path = Controllers/AddAnswerViewController.xib; sourceTree = "<group>"; };
+		C07148101A91D02A00AA01A0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controllers/MainViewController.h; sourceTree = "<group>"; };
+		C07148111A91D02A00AA01A0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controllers/MainViewController.m; sourceTree = "<group>"; };
+		C07148121A91D02A00AA01A0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Controllers/MainViewController.xib; sourceTree = "<group>"; };
+		C07148131A91D02A00AA01A0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		C07148141A91D02A00AA01A0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
+		C07148151A91D02A00AA01A0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Controllers/SettingsViewController.xib; sourceTree = "<group>"; };
+		C071481C1A91D04900AA01A0 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEffect.h; path = Services/SoundEffect.h; sourceTree = "<group>"; };
+		C071481D1A91D04900AA01A0 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundEffect.m; path = Services/SoundEffect.m; sourceTree = "<group>"; };
 		C076A0A11A89E5470062DE44 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		C076A0A61A89E8000062DE44 /* soundeffect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundeffect.m4a; sourceTree = "<group>"; };
-		C076A0A81A89EC020062DE44 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
-		C076A0A91A89EC020062DE44 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
 		C0A943B51A84A4A7001A0243 /* EightBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A943B91A84A4A7001A0243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A943BA1A84A4A7001A0243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,21 +99,6 @@
 		C0FD25981A84D2E5008FE57A /* 8ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8ball.png; path = Resources/Images/8ball.png; sourceTree = "<group>"; };
 		C0FD25991A84D2E5008FE57A /* 8ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8ball@2x.png"; path = "Resources/Images/8ball@2x.png"; sourceTree = "<group>"; };
 		C0FD259A1A84D2E5008FE57A /* 8ball@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8ball@3x.png"; path = "Resources/Images/8ball@3x.png"; sourceTree = "<group>"; };
-		C0FD25A21A84D45B008FE57A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		C0FD25A31A84D45B008FE57A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		C0FD25A41A84D45B008FE57A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		C0FD25A71A84D5EA008FE57A /* settings_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_button.png; sourceTree = "<group>"; };
-		C0FD25A81A84D5EA008FE57A /* settings_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_button@2x.png"; sourceTree = "<group>"; };
-		C0FD25A91A84D5EA008FE57A /* settings_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_button@3x.png"; sourceTree = "<group>"; };
-		C0FD25AD1A84D6DC008FE57A /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		C0FD25AE1A84D6DC008FE57A /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		C0FD25AF1A84D6DC008FE57A /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		C0FD25B21A84DAB4008FE57A /* 8ball_answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8ball_answer.png; sourceTree = "<group>"; };
-		C0FD25B31A84DAB4008FE57A /* 8ball_answer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8ball_answer@2x.png"; sourceTree = "<group>"; };
-		C0FD25B41A84DAB4008FE57A /* 8ball_answer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8ball_answer@3x.png"; sourceTree = "<group>"; };
-		C0FD25B81A84DFE1008FE57A /* answerBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answerBkg.png; sourceTree = "<group>"; };
-		C0FD25B91A84DFE1008FE57A /* answerBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "answerBkg@2x.png"; sourceTree = "<group>"; };
-		C0FD25BA1A84DFE1008FE57A /* answerBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "answerBkg@3x.png"; sourceTree = "<group>"; };
 		CEF861988669FB51FB7E9C87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,9 +143,9 @@
 		C07147A71A8E253800AA01A0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C07147A81A8E255700AA01A0 /* SettingsCell.h */,
-				C07147A91A8E255700AA01A0 /* SettingsCell.m */,
-				C07147AB1A8E257000AA01A0 /* SettingsCell.xib */,
+				C07148051A91CFFF00AA01A0 /* SettingsCell.h */,
+				C07148061A91CFFF00AA01A0 /* SettingsCell.m */,
+				C07148071A91CFFF00AA01A0 /* SettingsCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -154,7 +153,7 @@
 		C076A0A31A89E5C80062DE44 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C076A0A61A89E8000062DE44 /* soundeffect.m4a */,
+				C07147F21A91CF7300AA01A0 /* soundeffect.m4a */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -162,8 +161,8 @@
 		C076A0AB1A89EC090062DE44 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C076A0A81A89EC020062DE44 /* SoundEffect.h */,
-				C076A0A91A89EC020062DE44 /* SoundEffect.m */,
+				C071481C1A91D04900AA01A0 /* SoundEffect.h */,
+				C071481D1A91D04900AA01A0 /* SoundEffect.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -171,7 +170,6 @@
 		C0A943AC1A84A4A7001A0243 = {
 			isa = PBXGroup;
 			children = (
-				C076A0791A87A54F0062DE44 /* Answers.json */,
 				C0A943B71A84A4A7001A0243 /* EightBall */,
 				C0A943D41A84A4A7001A0243 /* EightBallTests */,
 				C0A943B61A84A4A7001A0243 /* Products */,
@@ -234,6 +232,7 @@
 		C0FD25901A84D290008FE57A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C07147F01A91CF5200AA01A0 /* Answers.json */,
 				C076A0A31A89E5C80062DE44 /* Sounds */,
 				C0FD25911A84D29D008FE57A /* Images */,
 			);
@@ -243,18 +242,18 @@
 		C0FD25911A84D29D008FE57A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C0FD25A71A84D5EA008FE57A /* settings_button.png */,
-				C0FD25A81A84D5EA008FE57A /* settings_button@2x.png */,
-				C0FD25A91A84D5EA008FE57A /* settings_button@3x.png */,
+				C07147F31A91CF8C00AA01A0 /* 8ball_answer.png */,
+				C07147F41A91CF8C00AA01A0 /* 8ball_answer@2x.png */,
+				C07147F51A91CF8C00AA01A0 /* 8ball_answer@3x.png */,
+				C07147F61A91CF8C00AA01A0 /* answerBkg.png */,
+				C07147F71A91CF8C00AA01A0 /* answerBkg@2x.png */,
+				C07147F81A91CF8C00AA01A0 /* answerBkg@3x.png */,
+				C07147F91A91CF8C00AA01A0 /* settings_button.png */,
+				C07147FA1A91CF8C00AA01A0 /* settings_button@2x.png */,
+				C07147FB1A91CF8C00AA01A0 /* settings_button@3x.png */,
 				C0FD25981A84D2E5008FE57A /* 8ball.png */,
 				C0FD25991A84D2E5008FE57A /* 8ball@2x.png */,
 				C0FD259A1A84D2E5008FE57A /* 8ball@3x.png */,
-				C0FD25B21A84DAB4008FE57A /* 8ball_answer.png */,
-				C0FD25B31A84DAB4008FE57A /* 8ball_answer@2x.png */,
-				C0FD25B41A84DAB4008FE57A /* 8ball_answer@3x.png */,
-				C0FD25B81A84DFE1008FE57A /* answerBkg.png */,
-				C0FD25B91A84DFE1008FE57A /* answerBkg@2x.png */,
-				C0FD25BA1A84DFE1008FE57A /* answerBkg@3x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -272,15 +271,15 @@
 		C0FD259F1A84D431008FE57A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C0FD25A21A84D45B008FE57A /* MainViewController.h */,
-				C0FD25A31A84D45B008FE57A /* MainViewController.m */,
-				C0FD25A41A84D45B008FE57A /* MainViewController.xib */,
-				C0FD25AD1A84D6DC008FE57A /* SettingsViewController.h */,
-				C0FD25AE1A84D6DC008FE57A /* SettingsViewController.m */,
-				C0FD25AF1A84D6DC008FE57A /* SettingsViewController.xib */,
-				C07147AD1A8E371B00AA01A0 /* AddAnswerViewController.h */,
-				C07147AE1A8E371B00AA01A0 /* AddAnswerViewController.m */,
-				C07147AF1A8E371B00AA01A0 /* AddAnswerViewController.xib */,
+				C071480D1A91D02A00AA01A0 /* AddAnswerViewController.h */,
+				C071480E1A91D02A00AA01A0 /* AddAnswerViewController.m */,
+				C071480F1A91D02A00AA01A0 /* AddAnswerViewController.xib */,
+				C07148101A91D02A00AA01A0 /* MainViewController.h */,
+				C07148111A91D02A00AA01A0 /* MainViewController.m */,
+				C07148121A91D02A00AA01A0 /* MainViewController.xib */,
+				C07148131A91D02A00AA01A0 /* SettingsViewController.h */,
+				C07148141A91D02A00AA01A0 /* SettingsViewController.m */,
+				C07148151A91D02A00AA01A0 /* SettingsViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -289,8 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				C07147A71A8E253800AA01A0 /* Cells */,
-				C07147B21A8E385D00AA01A0 /* AddAnswerView.h */,
-				C07147B31A8E385D00AA01A0 /* AddAnswerView.m */,
+				C071480A1A91D01000AA01A0 /* AddAnswerView.h */,
+				C071480B1A91D01000AA01A0 /* AddAnswerView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,8 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				C0A943BF1A84A4A7001A0243 /* EightBall.xcdatamodeld */,
-				C076A0761A87A2D40062DE44 /* Answer.h */,
-				C076A0771A87A2D40062DE44 /* Answer.m */,
+				C07147ED1A91CF2300AA01A0 /* Answer.h */,
+				C07147EE1A91CF2300AA01A0 /* Answer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -387,26 +386,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07147B11A8E371B00AA01A0 /* AddAnswerViewController.xib in Resources */,
-				C0FD25BC1A84DFE2008FE57A /* answerBkg@2x.png in Resources */,
-				C0FD25B71A84DAB4008FE57A /* 8ball_answer@3x.png in Resources */,
+				C07148171A91D02A00AA01A0 /* AddAnswerViewController.xib in Resources */,
+				C07148041A91CF8C00AA01A0 /* settings_button@3x.png in Resources */,
+				C07147FF1A91CF8C00AA01A0 /* answerBkg.png in Resources */,
+				C07148011A91CF8C00AA01A0 /* answerBkg@3x.png in Resources */,
 				C0A943CC1A84A4A7001A0243 /* LaunchScreen.xib in Resources */,
-				C0FD25B11A84D6DC008FE57A /* SettingsViewController.xib in Resources */,
-				C0FD25B61A84DAB4008FE57A /* 8ball_answer@2x.png in Resources */,
-				C0FD25AB1A84D5EA008FE57A /* settings_button@2x.png in Resources */,
-				C0FD25AA1A84D5EA008FE57A /* settings_button.png in Resources */,
-				C0FD25B51A84DAB4008FE57A /* 8ball_answer.png in Resources */,
+				C07147F11A91CF5200AA01A0 /* Answers.json in Resources */,
 				C0A943C91A84A4A7001A0243 /* Images.xcassets in Resources */,
-				C0FD25BD1A84DFE2008FE57A /* answerBkg@3x.png in Resources */,
+				C07147FC1A91CF8C00AA01A0 /* 8ball_answer.png in Resources */,
+				C07147FD1A91CF8C00AA01A0 /* 8ball_answer@2x.png in Resources */,
 				C0FD259C1A84D2E5008FE57A /* 8ball@2x.png in Resources */,
-				C0FD25AC1A84D5EA008FE57A /* settings_button@3x.png in Resources */,
-				C076A07A1A87A54F0062DE44 /* Answers.json in Resources */,
-				C07147AC1A8E257000AA01A0 /* SettingsCell.xib in Resources */,
+				C07148031A91CF8C00AA01A0 /* settings_button@2x.png in Resources */,
+				C071481B1A91D02A00AA01A0 /* SettingsViewController.xib in Resources */,
 				C0FD259B1A84D2E5008FE57A /* 8ball.png in Resources */,
-				C076A0A71A89E91D0062DE44 /* soundeffect.m4a in Resources */,
-				C0FD25A61A84D45B008FE57A /* MainViewController.xib in Resources */,
+				C07148091A91CFFF00AA01A0 /* SettingsCell.xib in Resources */,
+				C07148001A91CF8C00AA01A0 /* answerBkg@2x.png in Resources */,
+				C07148021A91CF8C00AA01A0 /* settings_button.png in Resources */,
 				C0FD259D1A84D2E5008FE57A /* 8ball@3x.png in Resources */,
-				C0FD25BB1A84DFE2008FE57A /* answerBkg.png in Resources */,
+				C07148191A91D02A00AA01A0 /* MainViewController.xib in Resources */,
+				C07147FE1A91CF8C00AA01A0 /* 8ball_answer@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,16 +455,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07147B41A8E385D00AA01A0 /* AddAnswerView.m in Sources */,
+				C07148161A91D02A00AA01A0 /* AddAnswerViewController.m in Sources */,
 				C0A943BE1A84A4A7001A0243 /* AppDelegate.m in Sources */,
-				C076A0781A87A2D40062DE44 /* Answer.m in Sources */,
-				C07147AA1A8E255700AA01A0 /* SettingsCell.m in Sources */,
-				C07147B01A8E371B00AA01A0 /* AddAnswerViewController.m in Sources */,
+				C071480C1A91D01000AA01A0 /* AddAnswerView.m in Sources */,
+				C071481E1A91D04900AA01A0 /* SoundEffect.m in Sources */,
 				C0A943C11A84A4A7001A0243 /* EightBall.xcdatamodeld in Sources */,
-				C076A0AA1A89EC020062DE44 /* SoundEffect.m in Sources */,
-				C0FD25B01A84D6DC008FE57A /* SettingsViewController.m in Sources */,
-				C0FD25A51A84D45B008FE57A /* MainViewController.m in Sources */,
+				C07148081A91CFFF00AA01A0 /* SettingsCell.m in Sources */,
+				C07148181A91D02A00AA01A0 /* MainViewController.m in Sources */,
 				C0A943BB1A84A4A7001A0243 /* main.m in Sources */,
+				C07147EF1A91CF2300AA01A0 /* Answer.m in Sources */,
+				C071481A1A91D02A00AA01A0 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
