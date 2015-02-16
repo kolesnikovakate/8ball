@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"8-ball";
+    self.title = @"Magic 8-Ball";
     isFirstLaunch_ = YES;
     soundEffect_ = [[SoundEffect alloc] init8BallSound];
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAnswer)];
