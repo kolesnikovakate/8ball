@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "Answer.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupAutoMigratingCoreDataStack];
+
+    NSError* err = nil;
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"Answers" ofType:@"json"];
+    __block NSArray* Answers = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
+                                                     options:kNilOptions
+                                                       error:&err];
+    if (!err) {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        if (![userDefaults objectForKey:@"isDBLoaded"]) {
+            [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+                [Answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    Answer *answer = [Answer MR_createEntityInContext:localContext];
+                    answer.text = [obj objectForKey:@"text"];
+                    answer.sound = [obj objectForKey:@"sound"];
+                    answer.sense = [obj objectForKey:@"sense"];
+                }];
+            }];
+            [userDefaults setObject:[NSNumber numberWithBool:YES] forKey:@"isDBLoaded"];
+            [userDefaults synchronize];
+        }
+    }
+
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:[NSNumber numberWithBool:YES] forKey:@"isSoundOn"];
+    [userDefaults synchronize];
+
+    MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    //[navigationController setNavigationBarHidden:YES animated:NO];
+    [self.window setRootViewController:navigationController];
+
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           nil]];
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
 
     return YES;
 }
