@@ -41,6 +41,7 @@
     self.tableView.sectionFooterHeight = 1;
     self.tableView.sectionHeaderHeight = 1;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    self.tableView.allowsSelectionDuringEditing = YES;
 
     rightBarButtonItemEdit_ =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                                                                        target:self
@@ -176,6 +177,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView setEditing:NO animated:YES];
     if (indexPath.section == 2 || indexPath.section == 1) {
         AddAnswerViewController *destVC = [[AddAnswerViewController alloc] init];
         if (indexPath.section == 1 ) {

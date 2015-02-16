@@ -22,13 +22,13 @@
     self = [super initWithFrame:viewFrame];
     if (self) {
         [self setBackgroundColor:[UIColor whiteColor]];
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 10.f, 300.f, 20.f)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.numberOfLines = 0;
         _titleLabel.text = @"Введите текст ответа";
         [self addSubview:_titleLabel];
 
-        _answerTextField = [[UITextView alloc] initWithFrame:CGRectMake(10.f, 40.f, 300.f, 80.f)];
+        _answerTextField = [[UITextView alloc] initWithFrame:CGRectZero];
         _answerTextField.delegate = self;
         _answerTextField.editable = YES;
         _answerTextField.backgroundColor = [UIColor colorWithWhite:0.930 alpha:1.000];
@@ -41,7 +41,7 @@
         [_answerTextField setContentInset:UIEdgeInsetsMake(0.f, 7.f, 0.f, -7.f)];
         [self addSubview:_answerTextField];
 
-        _saveButton = [[UIButton alloc] initWithFrame:CGRectMake(10.f, 130.f, 300.f, 40.f)];
+        _saveButton = [[UIButton alloc] initWithFrame:CGRectZero];
         [_saveButton setBackgroundColor:[UIColor grayColor]];
         [_saveButton setTitle:@"Сохранить" forState:UIControlStateNormal];
         _saveButton.titleLabel.font = [UIFont systemFontOfSize:20.0f];
@@ -51,6 +51,15 @@
 
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    float viewWidth = self.frame.size.width;
+    _titleLabel.frame = CGRectMake(10.f, 10.f, viewWidth - 20.f, 20.f);
+    _answerTextField.frame = CGRectMake(10.f, 40.f, viewWidth - 20.f, 80.f);
+    _saveButton.frame = CGRectMake(10.f, 130.f, viewWidth - 20.f, 40.f);
 }
 
 - (void)performSaveAnswer:(id)sender
