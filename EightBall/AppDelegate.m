@@ -18,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     [MagicalRecord setupAutoMigratingCoreDataStack];
 
     NSError* err = nil;
@@ -47,8 +50,8 @@
 
     MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-    //[navigationController setNavigationBarHidden:YES animated:NO];
     [self.window setRootViewController:navigationController];
+    [self.window makeKeyAndVisible];
 
     [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
